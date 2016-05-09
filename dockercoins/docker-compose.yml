@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: '2'
 
 networks:
@@ -63,11 +64,37 @@ services:
       - 80
     environment:
       DEBUG: 'yes'
+=======
+version: "2"
+
+services:
+  rng:
+    build: rng
+    ports:
+    - "8001:80"
+
+  hasher:
+    build: hasher
+    ports:
+    - "8002:80"
+
+  webui:
+    build: webui
+    ports:
+    - "8000:80"
+    volumes:
+    - "./webui/files/:/files/"
+>>>>>>> f2ccd65b341ed0995160c17611c77765c38472a5
 
   redis:
     image: redis
 
   worker:
+<<<<<<< HEAD
     image: guismo/worker
     environment:
       DEBUG: 'yes'
+=======
+    build: worker
+
+>>>>>>> f2ccd65b341ed0995160c17611c77765c38472a5
