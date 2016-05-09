@@ -1,14 +1,24 @@
 version: '2'
 
 networks:
-  default:
-    ipam:
-      config:
-        - subnet: 172.32.0.0/16
-          ip_range: 172.32.0.0/16
-          gateway: 172.32.0.1
+  # default:
+  #    ipam:
+  #         config:
+  #           - subnet: 172.16.0.0/16
+  #             ip_range: 172.16.0.0/16
+  #             gateway: 172.16.0.1
   rng:
+     # ipam:
+     #      config:
+     #        - subnet: 172.17.0.0/16
+     #          ip_range: 172.17.0.0/16
+     #          gateway: 172.17.0.1
   hasher:
+     # ipam:
+     #      config:
+     #        - subnet: 172.18.0.0/16
+     #          ip_range: 172.18.0.0/16
+     #          gateway: 172.18.0.1
 
 services: 
   rng:
